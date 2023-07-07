@@ -13,8 +13,7 @@ public class Car {
     private String model;
     @Column(name = "series")
     private int series;
-    @OneToOne(mappedBy = "car")
-    private User user;
+
 
     public Car() {
     }
@@ -23,11 +22,6 @@ public class Car {
         this.series = series;
     }
 
-    public Car(String model, int series, User user) {
-        this.model = model;
-        this.series = series;
-        this.user = user;
-    }
 
     public Long getId() {
         return id;
@@ -55,13 +49,7 @@ public class Car {
         this.series = series;
     }
 
-    public User getUser() {
-        return user;
-    }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
 
     @Override
     public String toString() {
